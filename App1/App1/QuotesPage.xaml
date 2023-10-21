@@ -4,7 +4,7 @@
              x:Class="App1.QuotesPage">
     <ContentPage.Content Padding="20">
         <StackLayout Padding="20">
-            <Label Text="{Binding Source={x:Reference FontSizeSlider}, Path=Value, StringFormat='Font Size: {0:F2}'}" FontSize="{Binding Source={x:Reference FontSizeSlider}, Path=Value}" />
+            <Label Text="{Binding Source={x:Reference FontSizeSlider}, Path=Value, StringFormat='Font Size: {0:F2}'}" />
 
             <Slider x:Name="FontSizeSlider" Maximum="50" Minimum="16" Value="16" />
 
