@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace App1
 {
-    // Enable XAML compilation.
+    // XAML compilation.
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class QuotesPage : ContentPage
     {
