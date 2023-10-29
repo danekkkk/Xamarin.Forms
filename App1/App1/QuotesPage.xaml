@@ -1,16 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.QuotesPage">
     <ContentPage.Content Padding="20">
-        <StackLayout Padding="20">
-            <Label Text="{Binding Source={x:Reference FontSizeSlider}, Path=Value, StringFormat='Font Size: {0:F2}'}" />
-
+        <StackLayout>
+            
+            <Button Text="Next" Clicked="ChangeQuote" HorizontalOptions="Center"/>
+            
+            <Label Text="{
+                Binding Source={x:Reference FontSizeSlider},
+                Path=Value,
+                StringFormat='Font Size: {0:F2}'}"
+             />
+            
             <Slider x:Name="FontSizeSlider" Maximum="50" Minimum="16" Value="16" />
-
-            <Label Text="{Binding Quotes[0]}" FontSize="{Binding Source={x:Reference FontSizeSlider}, Path=Value}" />
-            <Label Text="{Binding Quotes[1]}" FontSize="{Binding Source={x:Reference FontSizeSlider}, Path=Value}" />
-            <Label Text="{Binding Quotes[2]}" FontSize="{Binding Source={x:Reference FontSizeSlider}, Path=Value}" />
+            
+            <Label x:Name="quoteLabel" FontSize="{
+                Binding Source={x:Reference FontSizeSlider},
+                Path=Value}"
+             />
 
         </StackLayout>
     </ContentPage.Content>
